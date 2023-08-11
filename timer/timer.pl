@@ -15,8 +15,6 @@ sub pprint {
 }
 
 $timer_file = '/tmp/badass_timer.tmp';
-$arg = shift @ARGV;
-
 $now = `date +%s | tr -d '\\n'`;
 
 sub get_state { split ' ', `cat $timer_file` }
@@ -26,6 +24,7 @@ sub set_state {
   `echo -n "$start $pause" > $timer_file`;
 }
 
+$arg = shift @ARGV // "help";
 for ($arg) {
   if (/^start/) { 
     if (-e $timer_file) {
@@ -56,6 +55,6 @@ for ($arg) {
     print "Timer stopped.\n";
   }
   else { 
-    print "???";
+    print "???\n";
   }
 }
