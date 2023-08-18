@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "favicon-downloader"
+version = "0.1.0"
+description = ""
+authors = ["blue-pitaya <blue.pitaya@pm.me>"]
+readme = "README.md"
+packages = [{include = "favicon_downloader"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.31.0"
+beautifulsoup4 = "^4.12.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
