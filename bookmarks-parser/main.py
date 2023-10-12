@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 
 default_favicon_url = "/images/default_favicon.png"
-source_md_path = "bookmanrks.md"
+source_md_path = "bookmarks.md"
 
 
 def get_favicon(url):
